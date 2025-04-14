@@ -1,0 +1,10 @@
+flask
+tf-keras
+deepface
+tensorflow
+keras
+opencv-python
+numpy
+pandas
+matplotlib
+gdown

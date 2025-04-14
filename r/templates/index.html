@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Style Recommender</title>
+</head>
+<body style="font-family: Arial; text-align: center; padding-top: 50px;">
+
+  <h2>Upload Your Photo</h2>
+  <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Analyze</button>
+  </form>
+
+  {% if error %}
+    <p style="color:red;">⚠️ {{ error }}</p>
+  {% endif %}
+
+  {% if result %}
+    <h3>AI Style Suggestions</h3>
+    <p>👤 Gender: {{ result.gender }}</p>
+    <p>🎂 Age: {{ result.age }}</p>
+    <p>🌍 Race: {{ result.race }}</p>
+    <hr style="width: 300px;" />
+    <p>🧔 Beard Style: {{ result.beard_style }}</p>
+    <p>🕶 Eyewear: {{ result.eyewear }}</p>
+    <p>💇 Hairstyle: {{ result.hairstyle }}</p>
+  {% endif %}
+</body>
+</html>
